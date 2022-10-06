@@ -15,7 +15,7 @@ void Tphilosopher(int id) {
   while (1) {
     mutex_lock(&mutex);
     while (!(locks[lhs].__align && locks[rhs].__align)) {
-      printf("%d fail",id);	    
+      printf("%d fail\n",id);	    
       cond_wait(&cv, &mutex);
     }
     locks[lhs].__align = locks[rhs].__align = 0;
