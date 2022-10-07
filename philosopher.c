@@ -3,9 +3,9 @@
 #include<unistd.h>
 
 #define N 5
-sem_t locks[N];
-mutex_t mutex = MUTEX_INIT();
-cond_t cv = COND_INIT();
+sem_t locks[N]; // chopsticks'  status
+mutex_t mutex = MUTEX_INIT();//protect the locks
+cond_t cv = COND_INIT();//condition virable
 
 spinlock_t lock = SPIN_INIT();
 
